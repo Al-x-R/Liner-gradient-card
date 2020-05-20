@@ -1,0 +1,77 @@
+body {
+    background: #f2edf3;
+}
+
+.card {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 400px;
+    height: 260px;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    font-family: sans-serif;
+    overflow: hidden;
+    margin-right: 40px;
+}
+
+.icon {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.card::before {
+    content: ' ';
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    top: -50px;
+    right: -130px;
+    position: absolute;
+    background: white;
+    opacity: 0.1;
+}
+
+.card::after {
+    content: ' ';
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    bottom: -110px;
+    right: -40px;
+    position: absolute;
+    background: white;
+    opacity: 0.1;
+}
+
+.title {
+    text-transform: capitalize;
+    margin-top: 50px;
+    margin-left: 60px;
+    font-size: 17px;
+}
+
+.price {
+    margin-top: 30px;
+    margin-left: 60px;
+    font-size: 25px;
+}
+
+.index {
+    margin-top: 70px;
+    margin-left: 60px;
+    font-size: 15px;
+}
+
+.card:nth-child(1n) {
+    background-image: linear-gradient(to right, #ffbd93, #ff7196);
+}
+
+.card:nth-child(2n) {
+    background-image: linear-gradient(to right, #89c8f7, #0074da);
+}
+
+.card:nth-child(3n) {
+    background-image: linear-gradient(to right, #77d8d0, #3cceb2);
+}
