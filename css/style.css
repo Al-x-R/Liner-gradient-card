@@ -23,46 +23,44 @@ body {
     right: 50px;
 }
 
-.card::before {
+.card::before, .card::after {
     content: ' ';
-    width: 250px;
-    height: 250px;
+    --size: 250px;
+    width: var(--size);
+    height: var(--size);
     border-radius: 50%;
-    top: -50px;
-    right: -130px;
     position: absolute;
     background: white;
     opacity: 0.1;
 }
 
+.card::before {
+    top: -50px;
+    right: -130px;
+}
+
 .card::after {
-    content: ' ';
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
     bottom: -110px;
     right: -40px;
-    position: absolute;
-    background: white;
-    opacity: 0.1;
+}
+
+.content {
+    margin-left: 60px;
 }
 
 .title {
     text-transform: capitalize;
     margin-top: 50px;
-    margin-left: 60px;
     font-size: 17px;
 }
 
 .price {
     margin-top: 30px;
-    margin-left: 60px;
     font-size: 25px;
 }
 
 .index {
     margin-top: 70px;
-    margin-left: 60px;
     font-size: 15px;
 }
 
